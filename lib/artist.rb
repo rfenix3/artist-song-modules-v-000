@@ -30,6 +30,12 @@ class Artist
   def to_param
     name.downcase.gsub(' ', '-')
   end
+  
+  it 'converts its name to a url friendly parameter' do
+    artist.name = 'Miley Cyrus'
+    expect(artist.to_param).to eq("miley-cyrus")
+  end
+  
 
 end
 
