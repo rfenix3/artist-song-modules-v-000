@@ -27,16 +27,10 @@ class Artist
     songs.each { |song| add_song(song) }
   end
 
-  def to_param
-    name.downcase.gsub(' ', '-')
-  end
+  # def to_param
+  #   name.downcase.gsub(' ', '-')
+  # end
   
-  it 'converts its name to a url friendly parameter' do
-    artist.name = 'Miley Cyrus'
-    expect(artist.to_param).to eq("miley-cyrus")
-  end
-  
-
 end
 
   # def self.reset_all
